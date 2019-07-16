@@ -3,7 +3,7 @@ from run import bashC
 
 app = Flask(__name__)
 
-@app.route('/', host="https://ibmappendly.herokuapp.com")
+@app.route('/', host="ibmappendly.herokuapp.com")
 def student():
    return render_template('index.html')
 

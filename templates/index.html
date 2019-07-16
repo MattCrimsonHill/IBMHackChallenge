@@ -1,0 +1,59 @@
+<html>
+<head>
+	<style type="text/css">
+		.myButton {
+			background-color:#44c767;
+			-moz-border-radius:12px;
+			-webkit-border-radius:12px;
+			border-radius:12px;
+			display:inline-block;
+			cursor:pointer;
+			color:#ffffff;
+			font-family:Trebuchet MS;
+			font-size:17px;
+			padding:16px 31px;
+			text-decoration:none;
+			text-shadow:0px 0px 0px #2f6627;
+		}
+		.myButton:hover {
+			background-color:#5cbf2a;
+		}
+		.myButton:active {
+			position:relative;
+			top:1px;
+		}
+		.new
+		{    
+			padding-top: 150px;
+			padding-left: 38%;
+			font-family: Arial;
+		}
+		.css-input 
+		{ 
+			border-color:#cccccc; 
+			border-style:solid; 
+			border-width:6px; 
+			padding:25px; 
+			font-size:22px; 
+			text-shadow:0px 0px 0px rgba(42,42,42,.95); 
+			border-radius:0px;
+		} 
+		.css-input:focus
+		{ 
+			outline:none;
+		} 
+	</style>
+</head>
+   <body>
+      <form class= "new" action = "http://localhost:5000/result" method = "POST">
+         <p><h2>Topic: </h2> 
+         	<input align="center" type = "text" name = "Name"/>
+         </p>
+         <p><h2>Problem: </h2>
+         	<input align="center" type = "text" name = "Name2"> 
+         </p>
+         <p><input align="right" type= "submit" value = "submit"/></p>
+         <p>{{ output }}</p>
+      </form>
+   </body>
+</html>

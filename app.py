@@ -3,11 +3,11 @@ from run import bashC
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', host="https://ibmappendly.herokuapp.com")
 def student():
    return render_template('index.html')
 
-@app.route('/result', methods = ['POST', 'GET'])
+@app.route('/result', methods = ['POST', 'GET'], host="ibmappendly.herokuapp.com")
 def result():
    if request.method == 'POST':
       topic = request.form['Name']

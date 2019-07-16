@@ -12,8 +12,8 @@ def result():
    if request.method == 'POST':
       topic = request.form['Name']
       problem = request.form['Name2']
-      randomFile = bashC(topic, problem)
-      text = open(randomFile, 'r+')
+      bashC(topic, problem)
+      text = open('output.txt', 'r+')
       output = text.read()
       text.close()
       return render_template("index.html", output = output)

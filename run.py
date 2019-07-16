@@ -1,7 +1,9 @@
 import os
+import random
 def bashC(topic, problem):
 	#tag = "Javascript"
 	#problem = "window.open"
-	bashCommand = "socli -q " + problem + " >> output.txt"
+	randomFile = str(random.randint(1, 100000)) + ".txt"
+	bashCommand = "socli -q " + problem + " >> " + randomFile
 	print(bashCommand)
-	return os.system(bashCommand)
+	return randomFile

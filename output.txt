@@ -1,0 +1,38 @@
+Active code page: 65001
+
+Question: How to debug a Flask app
+
+How are you meant to debug errors in Flask?  Print to the console?  Flash messages to the page?  Or is there a more powerful option available to figure out what's happening when something goes wrong?
+
+	Votes 85 | asked | 6 years ago | viewed 131,124 times | active 25 days ago
+
+
+Answer:
+
+-------
+
+Running the app in development mode will show an interactive traceback and console in the browser when there is an error. To run in development mode, set the FLASK_ENV=development environment variable then use the flask run command (remember to point FLASK_APP to your app as well).
+For Linux, Mac, Linux Subsystem for Windows, Git Bash on Windows, etc.:
+export FLASK_APP=myapp
+export FLASK_ENV=development
+flask run
+
+For Windows CMD, use set instead of export:
+set FLASK_ENV=development
+
+For PowerShell, use $env:
+$env:FLASK_ENV = "development"
+
+Prior to Flask 1.0, this was controlled by the FLASK_DEBUG=1 environment variable instead.
+If you're using the app.run() method instead of the flask run command, pass debug=True to enable debug mode.
+Tracebacks are also printed to the terminal running the server, regardless of development mode.
+If you're using PyCharm, VS Code, etc., you can take advantage of its debugger to step through the code with breakpoints. The run configuration can point to a script calling app.run(debug=True, use_reloader=False), or point it at the venv/bin/flask script and use it as you would from the command line. You can leave the reloader disabled, but a reload will kill the debugging context and you will have to catch a breakpoint again.
+You can also use pdb, pudb, or another terminal debugger by calling set_trace in the view where you want to start debugging.
+
+Be sure not to use too-broad except blocks. Surrounding all your code with a catch-all try... except... will silence the error you want to debug. It's unnecessary in general, since Flask will already handle exceptions by showing the debugger or a 500 error and printing the traceback to the console.
+
+-------
+
+Question URL:
+https://stackoverflow.com/questions/17309889/how-to-debug-a-flask-app
+

@@ -5,7 +5,9 @@ app = Flask(__name__)
 
 @app.route('/', host="ibmappendly.herokuapp.com")
 def student():
-   return render_template('index.html')
+	question = ""
+	answer = ["","",""]
+	return render_template('index.html', question = question, answer = answer)
 
 @app.route('/result', methods = ['POST', 'GET'], host="ibmappendly.herokuapp.com")
 def result():
@@ -24,4 +26,4 @@ def result():
       return render_template("index.html", question = question, answer = answer)
 
 if __name__ == '__main__':
-   app.run(debug=True, host="ibmappendly.herokuapp.com")
+   app.run(debug=True, host = "ibmappendly.herokuapp.com")

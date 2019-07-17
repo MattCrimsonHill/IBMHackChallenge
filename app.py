@@ -26,4 +26,4 @@ def result():
       return render_template("index.html", question = question, answer = answer)
 
 if __name__ == '__main__':
-   app.run(debug=True, host = "ibmappendly.herokuapp.com")
+   app.run(debug=True)

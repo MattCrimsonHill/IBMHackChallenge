@@ -16,7 +16,12 @@ def result():
       text = open('output.txt', 'r+')
       output = text.read()
       text.close()
-      return render_template("index.html", output = output)
+      
+      result = output.split('Votes')
+      question = result[0].split('Question:')[-1]
+      answer = result[-1].split('-------')
+
+      return render_template("index.html", question = question, answer = answer)
 
 if __name__ == '__main__':
    app.run(debug=True, host="ibmappendly.herokuapp.com")

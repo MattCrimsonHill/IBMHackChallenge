@@ -1,60 +1,103 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<style type="text/css">
-		.myButton {
-			background-color:#44c767;
-			-moz-border-radius:12px;
-			-webkit-border-radius:12px;
-			border-radius:12px;
-			display:inline-block;
-			cursor:pointer;
-			color:#ffffff;
-			font-family:Trebuchet MS;
-			font-size:17px;
-			padding:16px 31px;
-			text-decoration:none;
-			text-shadow:0px 0px 0px #2f6627;
-		}
-		.myButton:hover {
-			background-color:#5cbf2a;
-		}
-		.myButton:active {
-			position:relative;
-			top:1px;
-		}
-		.new
-		{    
-			padding-top: 150px;
-			padding-left: 38%;
-			font-family: Arial;
-		}
-		.css-input 
-		{ 
-			border-color:#cccccc; 
-			border-style:solid; 
-			border-width:6px; 
-			padding:25px; 
-			font-size:22px; 
-			text-shadow:0px 0px 0px rgba(42,42,42,.95); 
-			border-radius:0px;
-		} 
-		.css-input:focus
-		{ 
-			outline:none;
-		} 
-	</style>
+	<title>Contact V4</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="/static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+<!--===============================================================================================-->
 </head>
-   <body>
-   		<center><img src="http://www.auplod.com/u/apduolb8d88.png"/></center>
-      <form class= "new" action = "http://ibmappendly.herokuapp.com/result" method = "POST">
-         <p><h2>Topic: </h2> 
-         	<input align="center" placeholder="e.g JavaScript, Python" type = "text" name = "Name"/>
-         </p>
-         <p><h2>Problem: </h2>
-         	<input align="center" placeholder="404 error in Python" type = "text" name = "Name2"> 
-         </p>
-         <p><input align="right" type= "submit" value = "submit"/></p>
-         <p>{{ output }}</p>
-      </form>
-   </body>
+<body>
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" action = "http://ibmappendly.herokuapp.com/result" method = "POST">
+				<span class="contact100-form-title">
+					ELI5 StackOverflow
+				</span>
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Enter Topic</span>
+					<input class="input100" type="text" name="Name" placeholder="Enter topic">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Search Query</span>
+					<input class="input100" type="text" name="Name2" placeholder="Enter the Query">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn">
+							<span>
+								Submit
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+				<div><p>{{ output }}</p></div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="/static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/bootstrap/js/popper.js"></script>
+	<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/daterangepicker/moment.min.js"></script>
+	<script src="/static/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
 </html>

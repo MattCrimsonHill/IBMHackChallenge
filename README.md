@@ -18,7 +18,7 @@
 * [Sai Adarsh S](https://LINkedin.com/in/sai-adarsh/), [Rajasekar M](https://www.linkedin.com/in/rajasekar1999), [Sibi Bose P.S.](https://www.linkedin.com/in/sibi-bose-8683b6150/)
 
 ### Stacks Used
-![img alt](images/stack.png)
+![img alt](images/stacks.png)
 
 ### Installation
 * To install the application follow the instructions below:

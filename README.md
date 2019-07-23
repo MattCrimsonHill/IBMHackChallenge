@@ -20,3 +20,6 @@ To install the application follow the instructions below:
 ## Running Locally	
 	python app.py
 	
+## Demo
+	![img](images/demo.png)
+	

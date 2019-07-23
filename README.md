@@ -20,12 +20,12 @@
 ### Installation
 * To install the application follow the instructions below:
 
-	git clone https://github.com/Sai-Adarsh/IBMHackChallenge.git
-	cd IBMHackChallenge
-	pip install -r requirement.txt
+		git clone https://github.com/Sai-Adarsh/IBMHackChallenge.git
+		cd IBMHackChallenge
+		pip install -r requirement.txt
 
 ### Running Locally	
-	python app.py
+		python app.py
 	
 ### Demo
 ![img](images/demo.png)

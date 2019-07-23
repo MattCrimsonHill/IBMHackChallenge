@@ -21,5 +21,5 @@ To install the application follow the instructions below:
 	python app.py
 	
 ## Demo
-	![img](images/demo.png)
+![img](images/demo.png)
 	

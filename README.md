@@ -27,7 +27,9 @@
 		cd IBMHackChallenge
 		pip install -r requirement.txt
 
-### Running Locally	
+### Running Locally
+* To run the WebApp locally: 
+		
 		python app.py
 
 ### Hosted WebApp

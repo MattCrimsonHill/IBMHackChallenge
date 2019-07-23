@@ -30,5 +30,5 @@
 ### Running Locally	
 		python app.py
 	
-### Demo
+### Demo: [IBM Hack Challenge](http://ibmappendly.herokuapp.com)
 ![img](images/demo.png)

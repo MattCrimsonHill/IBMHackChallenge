@@ -1,6 +1,6 @@
 # IBM Hack Challenge 2019 - Team Appendly
 
-![img alt](images/IBMHackChallenge.jpg)
+![img alt](images/IBMHackChallenge_banner.jpg)
 
 ## Theme: User Query on Stack Overflow 
 ### Problem Statement

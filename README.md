@@ -18,7 +18,7 @@
 * [Sai Adarsh S](https://LINkedin.com/in/sai-adarsh/), [Rajasekar M](https://www.linkedin.com/in/rajasekar1999), [Sibi Bose P.S.](https://www.linkedin.com/in/sibi-bose-8683b6150/)
 
 ### Installation
-To install the application follow the instructions below:
+* To install the application follow the instructions below:
 
 	git clone https://github.com/Sai-Adarsh/IBMHackChallenge.git
 	cd IBMHackChallenge

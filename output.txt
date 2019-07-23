@@ -1,0 +1,30 @@
+Active code page: 65001
+
+Question: Open URL in new window with Javascript
+
+I'm making a "share button" to share the current page. I would like to take the current page URL and open it in a new window. I have the current URL part working, but can't seem to get the next part working. 
+I'm struggling with the syntax. I would like to specify the new window size to width=520, height=570.
+Something like: 
+<a target="_blank" href="https://www.linkedin.com/cws/share?mini=true&amp;url=[sub]" onclick="this.href = this.href.replace('[sub]',window.location)">LinkedIn</a>
+
+Any ideas?
+
+	Votes 107 | asked | 6 years, 6 months ago | viewed 342,350 times | active 2 years, 4 months ago
+
+
+Answer:
+
+-------
+
+Use window.open():
+<a onclick="window.open(document.URL, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');">
+  Share Page
+</a>
+
+This will create a link titled Share Page which opens the current url in a new window with a height of 570 and width of 520.
+
+-------
+
+Question URL:
+https://stackoverflow.com/questions/14132122/open-url-in-new-window-with-javascript
+

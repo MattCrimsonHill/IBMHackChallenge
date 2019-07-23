@@ -1,5 +1,7 @@
 # IBM Hack Challenge 2019
 
+![img alt](images/download.jpg)
+
 ## Theme: User Query on Stack Overflow 
 * The problem statement aims at building a solution that helps to find the right answers that are relevant to the developer issues on Stack Overflow.
 
